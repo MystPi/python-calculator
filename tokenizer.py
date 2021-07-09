@@ -15,7 +15,7 @@ def tokenize(text: str) -> list:
 	i = 0
 	for char in text:
 		if char in operators:
-			if char == '-' and (i == 0 or (text[i - 1] not in operators)):
+			if char == '-' and (i == 0 or (text[i + 1].isdigit())):
 				current += char
 				continue
 			if len(current) > 0:
