@@ -70,7 +70,7 @@ def evaluate_rpn(rpn: list):
 					a = stack.pop(0)
 					stack.insert(0, a**b)
 			except IndexError:
-				print(f'Syntax error {token}')
+				print(f'Syntax error: {token}')
 		else:
 			print(f'Syntax error: {token}')
 			stack.insert(0, 0)
